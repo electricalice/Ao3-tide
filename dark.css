@@ -935,7 +935,7 @@ body,
 #modal,
 .filters .expander,
 .autocomplete div.dropdown ul {
-  color: #fafafa;
+  color: #e7e7e7;
   background-color: #2e2e2e;
 }
 
@@ -985,7 +985,7 @@ input[type=checkbox] + label,
 .userstuff h5,
 .userstuff h6,
 dd.fandom li.added.tag {
-  color: #fafafa;
+  color: #e7e7e7;
 }
 
 a,
@@ -1047,7 +1047,7 @@ input#site_search:focus,
 .secondary,
 .dropdown,
 form.verbose legend {
-  color: #fafafa;
+  color: #e7e7e7;
   background-color: #454545;
 }
 
@@ -1230,7 +1230,7 @@ select:focus,
 textarea:focus,
 input,
 textarea {
-  color: #fafafa;
+  color: #e7e7e7;
   border-top-color: #4a4a4a;
   border-color: #4a4a4a;
   background-color: #4a4a4a;
@@ -1264,7 +1264,7 @@ textarea {
 .announcement .action {
   background: #2e2e2e;
   border: 1px solid #363636;
-  color: #fafafa;
+  color: #e7e7e7;
 }
 
 .ui-draggable form {
