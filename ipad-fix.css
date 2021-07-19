@@ -1,0 +1,14 @@
+#workskin {
+  margin: auto;
+}
+
+#workskin,
+.system .userstuff,
+.collection blockquote.userstuff {
+  width: 90%;
+  max-width: 45em;
+}
+
+div#inner {
+  width: 90%;
+}

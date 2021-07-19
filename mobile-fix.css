@@ -1,0 +1,352 @@
+h4 {
+  font-size: 1.2em;
+}
+
+#footer .module {
+  max-width: 40%;
+  margin: auto;
+}
+
+.userstuff,
+#header {
+  font-size: 110%;
+}
+
+#header .search {
+  display: block;
+}
+
+#footer .heading,
+.comment h4.byline {
+  overflow-wrap: break-word;
+}
+
+#header .heading,
+#login,
+#greeting,
+#header .primary {
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  float: none;
+}
+
+#login, #greeting {
+  padding: 0;
+}
+
+#header .dropdown .menu a, #header .dropdown .menu .current {
+  white-space: nowrap;
+}
+
+#header .user {
+  float: none;
+  text-align: center;
+}
+
+.home .header .userstuff,
+.home .header dl.stats,
+.home .header .type {
+  margin-left: auto;
+}
+
+.home .header h2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  text-align: center;
+  word-break: break-word;
+}
+
+.home .header ul.actions,
+ul.actions,
+p.actions,
+li.actions,
+span.actions,
+fieldset.actions,
+dd.actions {
+  float: none;
+}
+
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu {
+  width: auto;
+}
+
+div.preface {
+  margin: 1.5em;
+}
+
+#dashboard,
+#dashboard.own {
+  border-bottom: 0px;
+  border-top: 0px;
+  border: 0px;
+}
+
+.blurb .header .heading {
+  margin: 0.375em 0.375em;
+  overflow-wrap: break-word;
+}
+
+.blurb .datetime {
+  position: initial;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* the following lines of codes rearrange the required tags icons*/
+.blurb h4.heading, .blurb .header .heading {
+  margin: 0;
+}
+
+.blurb ul.required-tags {
+  position: initial;
+  top: initial;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+}
+
+.blurb ul.required-tags li + li + li,
+.blurb ul.required-tags li + li + li + li {
+  position: initial;
+  left: initial;
+}
+
+.blurb ul.required-tags li {
+  display: inline-flex;
+}
+
+.bookmark p.status {
+  position: relative;
+  right: initial;
+  z-index: initial;
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.bookmark .status span, .bookmark .status a {
+  display: inline-block;
+}
+
+.bookmark span.count {
+  line-height: initial;
+  position: initial;
+  top: initial;
+  left: initial;
+  text-align: center;
+}
+
+.bookmark .status a:focus {
+  overflow: initial;
+}
+
+.bookmark .status .count {
+  background: none;
+}
+
+.blurb .header h5.fandoms {
+  margin: 0px;
+}
+
+.blurb .header p.notice,
+.blurb ul.series {
+  margin: 10px 0;
+}
+
+.blurb .tags li {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+a.tag {
+  word-break: break-word;
+}
+
+.filters dt {
+  background-color: transparent;
+}
+
+#ui-datepicker-div {
+  top: 522px !important;
+}
+
+.javascript {
+  background-color: transparent;
+}
+
+.assigned.module th[scope=col],
+thead th[scope=col] {
+  max-width: 18px;
+  overflow: hidden;
+}
+
+.primary li:nth-of-type(4) .menu {
+  margin-left: -70px;
+}
+
+p.kudos {
+  background: url(/images/imageset.png) no-repeat -110px -580px;
+  padding: 4em 0 0 0;
+  min-height: 50px;
+  word-break: break-word;
+}
+
+.blurb h4.heading a {
+  word-break: break-word;
+}
+
+.faq .userstuff .notice,
+.faq .userstuff .caution,
+.faq .example,
+.guideline .userstuff .notice,
+.guideline .userstuff .caution,
+.guideline .example {
+  /* mostly for stuff in the guidelines 
+  lowers the indent*/
+  margin: 0;
+}
+
+.userstuff dd {
+  /*less indent*/
+  margin-inline-start: 1em;
+}
+
+li.showme a.actions,
+dl.stats dd,
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.action:visited {
+  white-space: normal;
+  height: initial;
+}
+
+/*
+===========
+ Work Page
+===========
+*/
+#workskin,
+.collection blockquote.userstuff {
+  /*
+  This resets the main page width to a decent size for mobile
+  */
+  width: 100%;
+}
+
+p.kudos {
+  /*
+  Resets the padding for kudos username list and moves the kudos image
+  */
+  background: none;
+  padding: 0;
+  min-height: 0;
+  word-break: break-word;
+}
+
+p.kudos::before {
+  content: "Kudos:";
+}
+
+div.preface,
+.preface.group blockquote.userstuff {
+  /*
+  reduces the indent in the blockquotes and the author's note
+  */
+  margin: 0;
+}
+
+.chapter .secondary,
+.download .secondary {
+  /*
+  This moves the download option and the chapter option
+  in a better position
+  */
+  top: initial;
+  right: 0;
+  margin: 10px;
+}
+
+#workskin,
+.blurb .userstuff,
+.news .userstuff,
+.system .userstuff,
+.collection blockquote.userstuff {
+  width: 100% !important;
+}
+
+.skins .header .heading,
+.user.pseud.picture.blurb .header .heading {
+  margin: 0.375em 0.375em;
+}
+
+div#inner {
+  width: 100% !important;
+}
+
+.blurb dl.tags dd,
+dl.meta dd {
+  margin-left: 0;
+}
+
+.meta dd {
+  margin: 0.643em 0;
+}
+
+/*
+===========
+  Icons
+===========
+*/
+.user .primary p.icon,
+.admin .primary .icon,
+.collection .icon {
+  /* 
+  centers the icons on profile pages, collections and news posts
+  */
+  position: initial;
+  margin: 10px auto;
+}
+
+.primary .icon {
+  position: relative;
+}
+
+.user h2.heading,
+.admin h2.heading,
+.collection h2.heading {
+  /*
+  Centers Usernames and titles in admin pages and collections
+  */
+  margin: 10px auto;
+  text-align: center;
+}
+
+.comment .icon .visitor {
+  background: url(/images/imageset.png) no-repeat 0 -525px transparent;
+}
+
+input#site_search {
+  width: auto;
+}
+
+/* COMMENTS*/
+.comment blockquote.userstuff p {
+  width: 95%;
+  margin-left: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-block: 0;
+}

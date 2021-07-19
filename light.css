@@ -1,0 +1,1456 @@
+@charset "UTF-8";
+/*
+===========================
+General font and text stuff
+===========================
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  /*
+    -----------------TITLE FONT-----------------
+  This is the font for the titles, not for the body of text. 
+  If you want to change it remember to provide fallback fonts 
+  (something like 'serif' or 'sans-serif', separated by a comma)
+  */
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  border-bottom: none;
+  font-weight: normal;
+}
+
+body,
+input,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+button,
+blockquote,
+.filters dt,
+.filters dd,
+.filters input[type=submit],
+.filters .expander,
+.bookmark .user .meta,
+.datetime,
+a.work,
+span.symbol, .splash .news .meta, select {
+  /*
+  -----------------MAIN FONT-----------------
+  This is the font for the entire body of text. If you need to change it please do it here
+  Please also remember to provide fallback fonts 
+  (something like 'serif' or 'sans-serif', separated by a comma)
+  */
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+}
+
+p.note, blockquote, body,
+input,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+button, #main, select {
+  /*
+  -----------------TEXT SIZE-----------------
+  This sets the default text size
+  if you need to increase or decrease, please keep in mind that "em"
+  as a measurement changes A LOT between numbers, so you might want to try
+  decimals like 1.1em, 1.2em, 1.15em before going a number up (or down)
+  */
+  font-size: 1em;
+}
+
+.home .header h2,
+.preface h3,
+.faq .categories h3,
+.userstuff h3,
+#footer a {
+  /*
+  Removes all the underlines from titles
+  */
+  border-bottom: none;
+}
+
+.filters dt,
+.filters dd,
+.filters input[type=submit],
+.filters .expander, .userstuff h2, .userstuff h1, .userstuff h3, .userstuff h4, p.note, blockquote, body,
+input,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+button, #main, select {
+  /*
+  -----------------LINE HEIGHT-----------------
+  This is the line height of the text.
+
+    if you need to increase or decrease, please keep in mind that "em"
+  as a measurement changes A LOT between numbers, so you might want to try
+  decimals like 1.7em, 1.5em, 1.65em before going a number up (or down)
+  */
+  line-height: 1.125;
+}
+
+.filters dt,
+.filters dd,
+.filters input[type=submit],
+.filters .expander {
+  /* 
+  a smaller text for the filters
+  just remove the font-size line if you want it bigger
+  */
+  font-size: 0.8333333333em;
+}
+
+h4.heading {
+  /*ALLTHETITLESSSS*/
+  font-size: 1.44em;
+  font-weight: normal;
+}
+
+h4 {
+  /* should this be here if I reset it later? */
+  font-size: 1.2em;
+}
+
+h4.heading .datetime {
+  /* slightly bigger date on blurbs*/
+  padding: 5px;
+  font-size: 0.5787037037em;
+}
+
+.preface a:hover {
+  text-decoration: none;
+}
+
+#header {
+  /*
+  font size  of the stuff in the header menu
+  */
+  font-size: 0.8333333333em;
+}
+
+.news h4.heading {
+  margin: 0;
+}
+
+#header {
+  margin: 0px;
+  padding: 0.8em;
+  border-bottom: 1px solid;
+  border-color: #e8e8e8;
+}
+
+#header .search {
+  float: none;
+}
+
+input#site_search {
+  width: 60px;
+}
+
+#header #search .text {
+  margin: 0;
+}
+
+input#site_search:focus {
+  width: auto;
+}
+
+#header .heading {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 0;
+  margin-left: 0.5em;
+}
+
+#login,
+#greeting {
+  float: right;
+  position: relative;
+  display: inline-block;
+  padding: 0.5em;
+  margin-right: 0.5em;
+}
+
+#header .primary {
+  position: relative;
+  display: block;
+  float: none;
+  background: none;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  box-shadow: none;
+}
+
+#header .primary a {
+  color: currentColor;
+}
+
+#header .logo,
+#header .heading sup,
+#greeting p.icon {
+  display: none;
+}
+
+#header li {
+  display: inline-block;
+  float: none;
+  position: relative;
+}
+
+#header input,
+#header #search > *,
+#header #search .submit {
+  display: inline;
+  float: none;
+  vertical-align: middle;
+}
+
+#header .user {
+  padding: 0px;
+}
+
+#header h1 {
+  vertical-align: sub;
+}
+
+#header .user a:hover,
+#header .user a:focus,
+#header .user .current {
+  color: currentColor;
+  border-radius: 0px;
+}
+
+#footer {
+  background-image: none;
+  border-top: none;
+}
+
+#inner.wrapper {
+  min-height: 80vh;
+}
+
+#main {
+  padding-top: 2em;
+}
+
+#main.dashboard {
+  margin-top: 0px;
+}
+
+#header .menu li {
+  border-bottom: none;
+  margin: 0;
+}
+
+#header .open .menu, #header .dropdown:hover .menu, .open + #small_login, #header .menu li {
+  border-radius: 5px;
+}
+
+.notice a,
+.notice a:link,
+.notice a:visited,
+.announcement a,
+.announcement a:link,
+.announcement a:visited {
+  text-decoration: underline;
+}
+
+/*
+========
+Buttons!
+========
+*/
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu,
+.event .userstuff, .notice,
+.comment_notice,
+ul.notes,
+.caution,
+.error,
+.comment_error,
+.alert.flash,
+.actions a:hover,
+.actions input:hover,
+.actions a:focus,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:focus,
+.dynamic form,
+.ui-draggable form, #header .primary,
+.group.listbox,
+fieldset fieldset.listbox,
+#main li.blurb,
+.wrapper,
+#dashboard .secondary,
+.secondary,
+form blockquote.userstuff,
+.thread .comment,
+.toggled form,
+.listbox .index,
+form .notice,
+form ul.notes,
+form.verbose legend,
+.verbose form legend,
+span.question,
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+.delete a,
+span.delete,
+#header ul.primary, .ui-sortable li, input, .actions input,
+input[type=submit],
+textarea, .actions a,
+.actions a:link,
+.action,
+.action:link,
+button,
+.current,
+.actions label {
+  /*
+  This resets the shadows in several places
+  */
+  box-shadow: none;
+}
+
+#footer,
+.autocomplete .dropdown ul li:hover,
+li.selected,
+.autocomplete a:hover, form .notice,
+form ul.notes,
+form.verbose legend,
+.verbose form legend, input, .actions input,
+input[type=submit],
+textarea, .actions a,
+.actions a:link,
+.action,
+.action:link,
+button,
+.current,
+.actions label {
+  /*
+  This resets the background image from default skin in several places
+  */
+  background-image: none;
+}
+
+.actions input,
+input[type=submit],
+textarea, .actions a,
+.actions a:link,
+.action,
+.action:link,
+button,
+.current,
+.actions label {
+  /*
+  Further 3d elements to reset in webkit browsers
+  */
+  -webkit-appearance: none;
+}
+
+form .notice,
+form ul.notes,
+form.verbose legend,
+.verbose form legend,
+.actions a,
+.actions a:link,
+.action,
+.action:link,
+input[type=submit],
+button,
+.current,
+.actions label, .notice,
+.comment_notice,
+ul.notes,
+.caution,
+.error,
+.comment_error,
+.alert.flash,
+.actions a:hover,
+.actions input:hover,
+.actions a:focus,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:focus,
+.toggled form,
+.dynamic form,
+.ui-draggable form {
+  /* Sets the style for border buttons */
+  border: none;
+}
+
+.actions a,
+.actions a:link,
+.action,
+.action:link,
+button,
+.current,
+.actions label {
+  border: none;
+}
+
+input {
+  width: 96%;
+  border: 1px solid;
+}
+
+.actions a:hover,
+a:hover,
+.actions input:hover,
+#dashboard a:hover,
+.actions a:focus,
+.actions input:focus,
+#dashboard a:focus,
+.actions a:active,
+.current,
+a.current,
+.current a:visited,
+#dashboard .current,
+#outer .current,
+#header .current,
+span.unread,
+.replied,
+span.claimed,
+dl.index dd,
+.own,
+.draft,
+.draft .unread,
+.child,
+.unwrangled,
+.unreviewed,
+.ui-sortable li:hover,
+#header .primary .menu .current {
+  /* resets the border color */
+  border-color: initial;
+  /* extra aggressive shadow removing */
+  box-shadow: none !important;
+}
+
+form .notice,
+form ul.notes,
+form.verbose legend,
+.verbose form legend,
+.actions a,
+.actions a:link,
+.action,
+.action:link,
+input[type=submit],
+button,
+.current,
+.actions label {
+  border-bottom: none;
+}
+
+.listbox .index,
+.dashboard .listbox .index,
+.splash .news li,
+form dt,
+.picture .header {
+  /* 
+  some stuff needs some aggressive non-bordering 
+  */
+  border: none;
+  border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu,
+.event .userstuff {
+  /* 
+  removes some more effects of default skin
+  */
+  filter: none;
+}
+
+.autocomplete input,
+.autocomplete .dropdown ul li {
+  min-width: 10px;
+}
+
+fieldset.work.meta .fandom.required ul.autocomplete {
+  background: transparent;
+}
+
+/*
+============
+  Filters!
+============
+*/
+.filters .expander,
+.filters .expanded .expander {
+  /* 
+  sets the spacing and font of the filter expander text 
+  */
+  padding: 0px;
+  font-size: 1.05em;
+  background: none;
+}
+
+.filters .expander::before {
+  /* 
+  This is the arrow for the filters 
+  */
+  content: "➙";
+}
+
+.filters .expanded .expander::before {
+  /* 
+  This is the arrow for the filters when expanded 
+  */
+  content: "➘";
+}
+
+.filters input:checked + .indicator + span {
+  /*
+  resets the weight from the Ao3 default skin
+  */
+  font-weight: inherit;
+}
+
+/*
+=================
+      Forms
+=================
+*/
+/*
+This is the very complicated code for the checkboxes and the radio
+yes I hate it too.
+
+*/
+.filters [type=radio] + .indicator:before,
+.filters [type=radio]:checked + .indicator:before,
+.filters [type=checkbox] + .indicator:before,
+.filters .exclude [type=checkbox] + .indicator:before,
+.filters [type=checkbox]:checked + .indicator:before,
+.filters .exclude [type=checkbox]:checked + .indicator:before,
+input[type=checkbox],
+input[type=radio],
+input[type=checkbox]:checked,
+input[type=radio]:checked,
+.actions input[type=checkbox]:checked,
+label.action input[type=checkbox]:checked,
+input[type=checkbox]:hover,
+.actions input[type=checkbox]:hover {
+  /*
+  sets the size of the checkboxes and radio boxes around the website
+  including filters
+  */
+  width: 0.8em;
+  height: 0.8em;
+}
+
+input[type=radio] {
+  border-radius: 50%;
+}
+
+.filters [type=radio] + .indicator:before {
+  content: "";
+  vertical-align: -0.125em;
+  background: none;
+  background-color: #ebebeb;
+  border: none;
+}
+
+.filters [type=radio]:checked + .indicator:before {
+  content: "";
+  vertical-align: -0.125em;
+  background: none;
+  background-color: #d84549;
+  border: none;
+}
+
+.filters [type=checkbox] + .indicator:before,
+.filters .exclude [type=checkbox] + .indicator:before {
+  content: "";
+  padding: 0px;
+  border-radius: 0px;
+  vertical-align: -0.125em;
+  background: none;
+  background-color: #ebebeb;
+  border: none;
+}
+
+.filters [type=checkbox]:checked + .indicator:before,
+.filters .exclude [type=checkbox]:checked + .indicator:before {
+  content: "";
+  padding: 0px;
+  border-radius: 0px;
+  vertical-align: -0.125em;
+  background: none;
+  background-color: #d84549;
+  border: none;
+}
+
+.filters .exclude [type=checkbox]:checked + .indicator:before {
+  /* 
+  the exclude filters have a different color when checked
+  */
+  background-color: #bd203a;
+}
+
+input[type=checkbox],
+input[type=radio],
+.actions input[type=checkbox],
+label.action input[type=checkbox] {
+  background-color: #ebebeb;
+  border: 1px solid #e8e8e8;
+}
+
+input[type=checkbox],
+input[type=radio],
+input[type=checkbox]:checked,
+input[type=radio]:checked,
+.actions input[type=checkbox]:checked,
+label.action input[type=checkbox]:checked,
+input[type=checkbox]:hover,
+.actions input[type=checkbox]:hover {
+  /* 
+  removes browser-specific appearance of checkboxes and radio 
+  */
+  display: inline-block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type=checkbox]:checked,
+input[type=radio]:checked,
+.actions input[type=checkbox]:checked,
+label.action input[type=checkbox]:checked,
+input[type=checkbox]:hover,
+.actions input[type=checkbox]:hover {
+  background-color: #d84549;
+  border: none;
+}
+
+/*
+===============================
+  makes the layout smaller
+===============================
+*/
+div#inner {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 100em;
+}
+
+/*
+===============================
+Borders and boxes in the layout
+===============================
+*/
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+.listbox,
+.listbox .index,
+fieldset fieldset.listbox,
+.own,
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+form.verbose legend,
+.verbose form legend,
+li.blurb,
+li.comment,
+.comment h4.byline,
+dl.index dd,
+form blockquote.userstuff,
+table,
+tr,
+th,
+td,
+thead,
+tfoot,
+.reading h4.viewed, li.relationships a {
+  /* 
+  it removes the color background 
+  where it's set in Ao3's default skin
+  */
+  background: transparent;
+}
+
+.secondary,
+dl.meta,
+li.post.group,
+.faq .example,
+.guideline .example,
+tr:hover,
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+.listbox,
+fieldset fieldset.listbox,
+.own,
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+form.verbose legend,
+.verbose form legend,
+li.blurb,
+li.comment {
+  /* 
+  sets the border shapes 
+  */
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+th,
+thead,
+tbody tr {
+  /* 
+  sets the border shapes 
+  */
+  border: 1px solid;
+}
+
+li.post.group {
+  /* 
+  posts social distancing 
+  */
+  padding: 10px;
+}
+
+.splash .news li:last-of-type {
+  /* 
+  last news post in the home page has inexplicabbly a border-bottom
+  this removes it
+  */
+  border-bottom: 1px solid;
+  border-radius: 5px;
+}
+
+tr,
+th,
+td,
+thead,
+tfoot {
+  /* 
+  this is for tables
+  */
+  vertical-align: middle;
+}
+
+.bookmark .user,
+.filters dl,
+.filters dt,
+dl.index dd,
+div.comment,
+#modal,
+#dashboard.own,
+#dashboard ul,
+.autocomplete div.dropdown ul,
+.event .userstuff,
+#dashboard.own,
+#dashboard ul,
+.splash .module h3,
+.comment div.icon,
+a,
+a:link,
+a:visited:hover {
+  /* remove borders */
+  border: none;
+}
+
+#dashboard.own,
+#dashboard ul,
+.splash .module h3,
+.comment div.icon,
+a,
+a:link,
+a:visited:hover {
+  /* 
+  further removes borders to those classes where there's a top and bottom border 
+  set in ao3's default skin
+  */
+  border-top: none;
+  border-bottom: none;
+}
+
+span.symbol {
+  /* 
+  what the hell does this change I can't remember
+  */
+  color: initial;
+  border: 1px solid;
+  vertical-align: middle;
+}
+
+.blurb .header img, #workskin h2.heading img {
+  /* 
+  Aligns vertically the little lock next to the title in the blurb
+  it also gives a bit of a space enough to have a background if needed in dark mode, later
+  */
+  vertical-align: baseline;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+/* 
+I make the icons smaller, 
+and as such a few things need to be 
+properly positioned
+*/
+.icon {
+  height: 80px;
+  width: 80px;
+}
+
+.tag .primary .icon,
+.tagset .primary .icon {
+  background: url(/images/imageset.png) -10px -285px;
+}
+
+.skins .primary .icon {
+  background: url(/images/imageset.png) -10px -185px;
+}
+
+.comment h4.byline {
+  padding: 0.25em;
+}
+
+.abbreviated h4.byline {
+  padding-left: 0.25em;
+}
+
+.comment div.icon {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.comment .icon .visitor {
+  background: url(/images/imageset.png) no-repeat -10px -85px;
+  display: block;
+}
+
+/*end of stuff regarding the icon resizing*/
+.comment .posted {
+  /* 
+  positions the date of a comment 
+  */
+  display: block;
+  float: none;
+}
+
+.fandom .group.listbox {
+  width: 100%;
+}
+
+form.inbox {
+  overflow-x: initial;
+}
+
+#dashboard {
+  /*this deals with the border on ipad*/
+  border-color: transparent;
+}
+
+.LV_invalid {
+  background: #bd203a;
+  border: 1px solid #bd203a;
+  color: #fafafa;
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.LV_invalid:before {
+  border-color: #bd203a transparent;
+  border-width: 0 0.643em 0.643em;
+}
+
+.LV_invalid_field,
+input.LV_invalid_field:hover,
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover,
+textarea.LV_invalid_field:active {
+  border-color: #bd203a;
+}
+
+a.dropdown-toggle[href*="/works/new"] {
+  background: url(https://64.media.tumblr.com/6a480ec874a2d8405884dca4c4359f0e/8b704f26c7323545-70/s100x200/404cbc9fc50f83963444b551b20f4ddd06d23f53.png) !important;
+  background-size: 15px 15px !important;
+  text-indent: -9999px;
+  display: block-inline;
+  width: 15px !important;
+  height: 15px !important;
+  padding: 0px !important;
+}
+
+a[href*="/users/logout"] {
+  background: url(https://64.media.tumblr.com/28db0028536206eb80f4f6238634738f/8b704f26c7323545-9b/s100x200/4519ffcbaeeee4c8dd80799e98111f8ef459fc83.png) !important;
+  background-size: 15px 15px !important;
+  text-indent: -9999px;
+  display: block-inline;
+  width: 15px !important;
+  height: 15px !important;
+  padding: 0px !important;
+}
+
+body,
+#header,
+#outer.wrapper,
+#inner.wrapper,
+.secondary,
+#modal,
+.filters .expander,
+.autocomplete div.dropdown ul {
+  color: #2e2e2e;
+  background-color: #fafafa;
+}
+
+li.blurb,
+.dashboard li.own,
+li.skins.own,
+.listbox,
+fieldset,
+li.post.group,
+li.comment, .wrapper dl.meta, form dl {
+  /* dark mode cards */
+  background-color: transparent;
+}
+
+::-moz-selection,
+::selection,
+::-webkit-selection {
+  background-color: #d84549;
+  color: #fafafa;
+}
+
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.actions input,
+input[type=submit],
+button,
+.current,
+.actions label,
+.listbox > .heading,
+.listbox .heading a:visited,
+form dd.required,
+.filters dt,
+.filters dd,
+.filters input[type=submit],
+.filters .expander,
+#header .primary .menu a,
+#header .primary .menu .current,
+input[type=radio] + label,
+input[type=checkbox] + label,
+.userstuff h1,
+.userstuff h2,
+.userstuff h3,
+.userstuff h4,
+.userstuff h5,
+.userstuff h6,
+dd.fandom li.added.tag {
+  color: #2e2e2e;
+}
+
+a,
+a:link,
+a:visited,
+a.tag,
+a.tag:link,
+a.tag:visited,
+.listbox .index a,
+.listbox .index a:link,
+.listbox .index a:visited,
+#header .heading a,
+#header .heading a:link,
+#header .heading a:visited,
+.splash .module h3,
+.blurb h4 a:link,
+.blurb h4 a,
+.blurb h4 a:link,
+.blurb h4 a:visited,
+#header a,
+#header a:link,
+#header a:visited,
+#header .current,
+#header .primary .open a,
+#header .primary .open a:link,
+#header .primary .open a:visited,
+#header .primary .dropdown a,
+#header .primary .dropdown a:link,
+#header .primary .dropdown a:visited,
+#header .primary .dropdown a:focus,
+#dashboard a,
+#dashboard a:link,
+#dashboard a:visited,
+#dashboard span,
+li::marker,
+.draggable,
+.droppable {
+  color: #d84549;
+}
+
+.actions a,
+.actions a:link,
+.actions a:visited,
+.action,
+.action:link,
+.action:visited,
+.actions input,
+input[type=submit],
+button,
+.current,
+.actions label,
+.dropdown,
+.splash .favorite li:nth-of-type(odd) a,
+input#site_search:focus,
+#header #search input:focus,
+.autocomplete div.dropdown ul,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown,
+form.verbose legend {
+  color: #2e2e2e;
+  background-color: #f2f2f2;
+}
+
+a:hover,
+a:visited:hover,
+a.tag:hover,
+a.tag:visited:hover,
+.listbox .heading a.tag:hover,
+.listbox .heading a.tag:visited:hover,
+.listbox .index a:hover,
+.listbox .index a:visited:hover,
+#dashboard a:hover,
+#dashboard a:visited:hover,
+.actions a:hover,
+.actions a:visited:hover,
+.actions a:focus,
+.actions input:hover,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:visited:hover,
+.action:focus,
+.splash .favorite li:nth-of-type(odd) a:hover,
+.splash .favorite li:nth-of-type(odd) a:visited:hover,
+.splash .favorite li:nth-of-type(odd) a:focus,
+.blurb h4 a:visited:hover,
+.blurb h4 a:hover,
+input[type=submit]:hover,
+#header .dropdown .menu a:hover,
+#header .dropdown .menu a:visited:hover,
+#header .dropdown .menu a:focus:hover,
+a[href*="/users/logout"],
+.event .userstuff,
+.event .userstuff a,
+.event .userstuff a:link,
+.event .userstuff a:visited {
+  background: linear-gradient(126deg, #d84549 0%, #e14c74 100%);
+  color: #fafafa;
+}
+
+.blurb h4 a:visited {
+  color: #d84549 !important;
+}
+
+#dashboard .current,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu,
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a,
+#header #search input:focus,
+#header #search input,
+tr:hover,
+#outer .current,
+.toggled form,
+.dynamic form,
+.secondary,
+.dropdown, .statistics .index li:nth-of-type(even), .ui-sortable li {
+  background-color: #f2f2f2;
+  /* needs this too to override some instances */
+  background: #f2f2f2;
+}
+
+.thread .even, .ui-sortable li:hover {
+  background-color: transparent;
+}
+
+.autocomplete .dropdown ul li:hover,
+li.selected {
+  /* cos'è sta roba e perchè l'ho fatta in modo diverso su dark e light*/
+  background-color: #d84549;
+  color: #fafafa;
+}
+
+a.modal.help:hover, li.relationships a {
+  background-color: transparent;
+}
+
+.notice,
+.comment_notice,
+ul.notes,
+.caution,
+.comment_error,
+.alert.flash,
+.required .autocomplete,
+.autocomplete .notice,
+#header h2.collections,
+#header h2 {
+  background-color: #d1e9eb;
+  color: #2e2e2e;
+}
+
+.notice a, .notice a:link, .notice a:visited, .caution a, .caution a:link, .caution a:visited {
+  color: #2e2e2e;
+  text-decoration: underline;
+}
+
+.error {
+  background-color: #d1e9eb;
+  color: #2e2e2e;
+}
+
+#footer {
+  background: linear-gradient(126deg, #d84549 0%, #e14c74 100%);
+}
+#footer a,
+#footer .heading,
+#footer li {
+  color: #fafafa;
+}
+
+#footer {
+  background: linear-gradient(126deg, #d84549 0%, #e14c74 100%);
+}
+
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+.listbox,
+fieldset fieldset.listbox,
+.own,
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed,
+form.verbose legend,
+.verbose form legend,
+.secondary,
+th,
+thead,
+tbody tr,
+.filters fieldset,
+.wrapper,
+li.blurb,
+dl.meta,
+.faq .example,
+.guideline .example,
+li.post.group,
+li.comment,
+.splash .news li:last-of-type, .ui-sortable li {
+  border-color: #e8e8e8;
+}
+
+.required,
+.alert.flash,
+.nominations .rejected {
+  color: #bd203a !important;
+}
+
+p.required.notice {
+  color: #2e2e2e !important;
+}
+
+form.search input[type=text],
+dd.autocomplete li.input,
+input[type=radio],
+select,
+input[type=checkbox],
+input[type=file],
+input.number,
+p input,
+p select,
+.heading select,
+li select,
+input:focus,
+select:focus,
+textarea:focus,
+input,
+textarea {
+  color: #2e2e2e;
+  border-top-color: #ebebeb;
+  border-color: #ebebeb;
+  background-color: #ebebeb;
+}
+
+.filters [type=radio] + .indicator:before,
+.filters [type=checkbox] + .indicator:before,
+.filters .exclude [type=checkbox] + .indicator:before {
+  background-color: #ebebeb;
+}
+
+.filters [type=radio]:checked + .indicator:before,
+.filters [type=checkbox]:checked + .indicator:before,
+.filters .exclude [type=checkbox]:checked + .indicator:before {
+  background-color: #d84549;
+}
+
+.filters .exclude [type=checkbox]:checked + .indicator:before {
+  background-color: #bd203a;
+}
+
+.secondary {
+  background-color: #fafafa;
+}
+
+.javascript {
+  background-color: #fafafa !important;
+}
+
+.announcement input[type=submit],
+.announcement .action {
+  background: #fafafa;
+  border: 1px solid #e8e8e8;
+  color: #2e2e2e;
+}
+
+.ui-draggable form {
+  box-shadow: 0 0 3px #ebebeb;
+}
+
+.userstuff blockquote {
+  border-inline-start: 2px solid #d84549;
+}
+
+span.offered.requested {
+  color: #F2AA4C;
+}
+
+span.offered,
+.replied,
+.nominations .approved {
+  color: #75BD57;
+}
+
+.chapter .preface {
+  border-color: #e8e8e8;
+}
+
+span.requested,
+.nominations .rejected {
+  color: #A62637;
+}
+
+.blurb .header h4.heading a:hover,
+.blurb .header h4.heading a:visited:hover {
+  color: #fafafa !important;
+}
+
+.blurb .header img, #workskin h2.heading img {
+  background-color: transparent;
+}
+
+tbody tr:hover {
+  border-color: #e8e8e8;
+}
+
+#header h2 {
+  border-color: #e8e8e8;
+}
+
+#workskin,
+.system .userstuff,
+.collection blockquote.userstuff {
+  width: 70%;
+  max-width: 45em;
+}
+
+.blurb blockquote {
+  text-align: left;
+}
+
+.comment blockquote.userstuff {
+  margin-block-start: 0;
+}
+
+.splash .comment .userstuff {
+  width: 95%;
+  margin: auto;
+}
+
+#main.system h2.heading {
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+
+.blurb h4.heading {
+  text-align: center;
+  padding: 10px 0;
+  line-height: 150%;
+}
+
+.blurb h4.heading a {
+  display: inline-block;
+  font-size: 100%;
+  border-radius: 5px;
+}
+
+.blurb h4.heading a:first-of-type {
+  display: block;
+  font-size: 140%;
+  margin-bottom: 10px;
+}
+
+.blurb .header .heading {
+  margin: 0.375em 5.25em;
+}
+
+h5.fandoms.heading {
+  text-align: center;
+}
+
+.splash blockquote.userstuff.summary {
+  width: 95%;
+  margin: auto 10px;
+}
+
+dl.stats dt {
+  display: none;
+}
+
+li.collection dl.stats dt, li.series dl.stats dt, dl.series dl.stats dt {
+  display: inline-block !important;
+}
+
+dl.stats dd.kudos::before {
+  background: url(https://64.media.tumblr.com/23a3c6f134a96386f50fb8982a353590/8b704f26c7323545-01/s100x200/31e25f0be03646918168c4d49bd2ee9733b2cd59.png);
+}
+
+dl.stats dd.words::before {
+  background: url(https://64.media.tumblr.com/7453ae8f68ca0b9aec02a1e206a876ec/8b704f26c7323545-1d/s100x200/9539dd52cc70e9125cfedff9629ab7ed01ea2c99.png);
+}
+
+dl.stats dd.chapters::before {
+  background: url(https://64.media.tumblr.com/05dfbc6eac61a516ab842fb97132f5be/8b704f26c7323545-ce/s100x200/3651bd1d102707d79b9b25cd42a7eb7daa28e714.png);
+}
+
+dl.stats dd.comments::before {
+  background: url(https://64.media.tumblr.com/7172c0bbe03a0eef7b236014dc78c905/8b704f26c7323545-78/s250x400/f37ba1ff69b5ef2ad7e5fe66b61fd748badc00d1.png);
+}
+
+dl.stats dd.bookmarks::before {
+  background: url(https://64.media.tumblr.com/e61846b8282228fe2c81e8ac22135142/8b704f26c7323545-83/s100x200/cddf3a9004df196cf60be04d3285bf3e9e540e14.png);
+}
+
+dl.stats dd.hits::before {
+  background: url(https://64.media.tumblr.com/3287a69822044de32506324a14e582d9/8b704f26c7323545-9f/s100x200/d85d22b21a630d809cdf8b13e961d869148e6321.png);
+}
+
+dl.stats dd.collections::before {
+  background: url(https://64.media.tumblr.com/304e0d81e625b7e79438ec334a8a663a/8b704f26c7323545-09/s100x200/63dcd0cbbb8c1f721ada2b640b4fb9f7a6e0120f.png);
+}
+
+dl.work dl.stats dd.published::before {
+  background: url(https://64.media.tumblr.com/d1d918497133d2b579c017149ae799a6/8b704f26c7323545-71/s250x400/2d128debfe1f43f88f139e0a1bc650aa8b0e174e.png);
+}
+
+dl.work dl.stats dd.status::before {
+  background: url(https://64.media.tumblr.com/a27eacf7d3e5e49f2e2c6671ef427157/8b704f26c7323545-da/s250x400/d247e8b2e3a82635f8c12d7bfcd45cd6cc0895f6.png);
+}
+
+li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  content: " ";
+  background-size: 14px 14px !important;
+  margin-right: 5px;
+}
+
+dl.stats dd.published::before, dl.stats dd.status::before {
+  width: 0px;
+  margin-right: 0px;
+}
+
+a.tag:hover, li.relationships a.tag:hover, li.characters a.tag:hover {
+  background: linear-gradient(126deg, #d84549 0%, #e14c74 100%) !important;
+  box-shadow: 1px 3px 10px -3px #c7c7c7 !important;
+}
+
+a.tag {
+  background: #f2f2f2 !important;
+  padding: 2px 10px;
+  margin: 4px 0px;
+  border-radius: 0 15px 15px;
+  display: inline-block;
+}
+
+li.relationships a.tag {
+  background: #eed8d9 !important;
+}
+
+li.characters a.tag {
+  background: #f0e6e6 !important;
+}
+
+.commas li:after {
+  content: "";
+}
+
+.tag .primary .icon, .tagset .primary .icon {
+  /* idgaf about icons in the tag pages they are useless */
+  display: none;
+}
+
+h2.heading a.tag {
+  font-size: 75%;
+}
