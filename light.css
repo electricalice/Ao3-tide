@@ -1376,11 +1376,11 @@ dl.stats dd.kudos::before {
 }
 
 dl.stats dd.words::before {
-  background: url(https://64.media.tumblr.com/7453ae8f68ca0b9aec02a1e206a876ec/8b704f26c7323545-1d/s100x200/9539dd52cc70e9125cfedff9629ab7ed01ea2c99.png);
+  background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
 }
 
 dl.stats dd.chapters::before {
-  background: url(https://64.media.tumblr.com/05dfbc6eac61a516ab842fb97132f5be/8b704f26c7323545-ce/s100x200/3651bd1d102707d79b9b25cd42a7eb7daa28e714.png);
+  background: url(https://64.media.tumblr.com/a8ca48310f24581ae539336583690b26/b2e751421a20aa0c-5c/s100x200/a51b914598b64c3ddf6f705b278f11a68301d443.png);
 }
 
 dl.stats dd.comments::before {
@@ -1388,23 +1388,23 @@ dl.stats dd.comments::before {
 }
 
 dl.stats dd.bookmarks::before {
-  background: url(https://64.media.tumblr.com/e61846b8282228fe2c81e8ac22135142/8b704f26c7323545-83/s100x200/cddf3a9004df196cf60be04d3285bf3e9e540e14.png);
+  background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
 }
 
 dl.stats dd.hits::before {
-  background: url(https://64.media.tumblr.com/3287a69822044de32506324a14e582d9/8b704f26c7323545-9f/s100x200/d85d22b21a630d809cdf8b13e961d869148e6321.png);
+  background: url(https://64.media.tumblr.com/b2b8862a356132ac1aa41e9e9f0ddd1d/b2e751421a20aa0c-9e/s100x200/dcd2bcb1adbbb8f9e1844b61aee3dd3a653531e3.png);
 }
 
 dl.stats dd.collections::before {
-  background: url(https://64.media.tumblr.com/304e0d81e625b7e79438ec334a8a663a/8b704f26c7323545-09/s100x200/63dcd0cbbb8c1f721ada2b640b4fb9f7a6e0120f.png);
+  background: url(https://64.media.tumblr.com/ae825c2ad8071426c298c5b52970e294/b2e751421a20aa0c-18/s100x200/d1eb5dd259e2db588cda2100057c2c8fd9efaaf0.png);
 }
 
 dl.work dl.stats dd.published::before {
-  background: url(https://64.media.tumblr.com/d1d918497133d2b579c017149ae799a6/8b704f26c7323545-71/s250x400/2d128debfe1f43f88f139e0a1bc650aa8b0e174e.png);
+  background: url(https://64.media.tumblr.com/7e13419071a7eeb35f48a76c7aa0ba36/b2e751421a20aa0c-5d/s250x400/7f351f60793ad683e4a9dc4de55e4ee4d625f9d2.png);
 }
 
 dl.work dl.stats dd.status::before {
-  background: url(https://64.media.tumblr.com/a27eacf7d3e5e49f2e2c6671ef427157/8b704f26c7323545-da/s250x400/d247e8b2e3a82635f8c12d7bfcd45cd6cc0895f6.png);
+  background: url(https://64.media.tumblr.com/0ef9349a36cf808783e9488a97b64678/b2e751421a20aa0c-10/s250x400/8df1d3da298f875381822968f8e71ed4d7bcae31.png);
 }
 
 li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before {
