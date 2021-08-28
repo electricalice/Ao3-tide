@@ -184,14 +184,38 @@ a.tag {
   background-color: transparent;
 }
 
+/*wrangling stuff*/
 .assigned.module th[scope=col],
 thead th[scope=col] {
   max-width: 18px;
   overflow: hidden;
 }
 
+#wrangulator table {
+  font-size: 80%;
+}
+
+#wrangulator ul.actions li a, #wrangulator ul.actions li label {
+  font-size: 70% !important;
+}
+
+tr, th, td, thead, tfoot {
+  vertical-align: top;
+}
+
+#wrangulator tbody tr th {
+  word-break: break-word;
+}
+
+#wrangulator tbody a.tag {
+  margin: initial;
+  padding: initial;
+  background: initial !important;
+}
+
+/*end wrangling stuff*/
 .primary li:nth-of-type(4) .menu {
-  margin-left: -70px;
+  margin-left: -110px;
 }
 
 p.kudos {

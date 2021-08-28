@@ -694,7 +694,8 @@ th,
 td,
 thead,
 tfoot,
-.reading h4.viewed, li.relationships a {
+.reading h4.viewed,
+li.relationships a {
   /* 
   it removes the color background 
   where it's set in Ao3's default skin
@@ -727,7 +728,8 @@ fieldset fieldset.listbox,
 form.verbose legend,
 .verbose form legend,
 li.blurb,
-li.comment {
+li.comment, #bookmark_form_placement form,
+#collection-form form {
   /* 
   sets the border shapes 
   */
@@ -945,7 +947,8 @@ li.skins.own,
 .listbox,
 fieldset,
 li.post.group,
-li.comment, .wrapper dl.meta, form dl {
+li.comment, .wrapper dl.meta, form dl, #bookmark_form_placement form,
+#collection-form form {
   /* dark mode cards */
   background-color: transparent;
 }
@@ -1195,7 +1198,10 @@ dl.meta,
 .guideline .example,
 li.post.group,
 li.comment,
-.splash .news li:last-of-type, .ui-sortable li {
+.splash .news li:last-of-type,
+.ui-sortable li,
+#bookmark_form_placement form,
+#collection-form form {
   border-color: #e8e8e8;
 }
 
