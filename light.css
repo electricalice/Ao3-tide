@@ -695,7 +695,9 @@ td,
 thead,
 tfoot,
 .reading h4.viewed,
-li.relationships a {
+li.relationships a,
+#bookmark_form_placement form,
+#collection-form form {
   /* 
   it removes the color background 
   where it's set in Ao3's default skin
@@ -907,6 +909,11 @@ input.LV_invalid_field:active,
 textarea.LV_invalid_field:hover,
 textarea.LV_invalid_field:active {
   border-color: #bd203a;
+}
+
+#bookmark-form,
+#collection-form {
+  margin-top: 20px;
 }
 
 a.dropdown-toggle[href*="/works/new"] {

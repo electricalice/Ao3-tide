@@ -911,6 +911,11 @@ textarea.LV_invalid_field:active {
   border-color: #ffb6b9;
 }
 
+#bookmark-form,
+#collection-form {
+  margin-top: 20px;
+}
+
 a.dropdown-toggle[href*="/works/new"] {
   background: url(https://64.media.tumblr.com/6a480ec874a2d8405884dca4c4359f0e/8b704f26c7323545-70/s100x200/404cbc9fc50f83963444b551b20f4ddd06d23f53.png) !important;
   background-size: 15px 15px !important;
