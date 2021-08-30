@@ -1420,7 +1420,7 @@ dl.work dl.stats dd.status::before {
   background: url(https://64.media.tumblr.com/0ef9349a36cf808783e9488a97b64678/b2e751421a20aa0c-10/s250x400/8df1d3da298f875381822968f8e71ed4d7bcae31.png);
 }
 
-li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before {
+ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before {
   display: inline-block;
   width: 14px;
   height: 14px;
