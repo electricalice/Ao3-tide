@@ -697,7 +697,7 @@ tfoot,
 .reading h4.viewed,
 li.relationships a,
 #bookmark_form_placement form,
-#collection-form form {
+#collection-form form, .nomination dt {
   /* 
   it removes the color background 
   where it's set in Ao3's default skin
