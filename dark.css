@@ -47,7 +47,7 @@ span.symbol, .splash .news .meta, select {
   font-family: Verdana, "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
 }
 
-p.note, blockquote, body,
+.qtip-content, p.note, blockquote, body,
 input,
 .toggled form,
 .dynamic form,
@@ -890,12 +890,18 @@ form.inbox {
   border-color: transparent;
 }
 
-.LV_invalid {
+.LV_invalid, .qtip-content {
+  /*tooltips in tagsets and error messages in forms*/
   background: #ffb6b9;
   border: 1px solid #ffb6b9;
   color: #2e2e2e;
   border-radius: 5px;
   box-shadow: none;
+}
+
+.qtip-content {
+  /*tooltips in tagsets*/
+  border-radius: 0 5px 5px;
 }
 
 .LV_invalid:before {
@@ -994,7 +1000,7 @@ input[type=checkbox] + label,
 .userstuff h4,
 .userstuff h5,
 .userstuff h6,
-dd.fandom li.added.tag {
+dd.fandom li.added.tag, span.unreviewed.symbol, ul.notes li::marker {
   color: #e7e7e7;
 }
 
