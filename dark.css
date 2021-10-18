@@ -1364,6 +1364,11 @@ tbody tr:hover {
   display: block;
 }
 
+::selection {
+  background-color: #8BC6EC;
+  color: #2e2e2e;
+}
+
 .blurb h4.heading {
   text-align: center;
   padding: 10px 0;
@@ -1437,6 +1442,10 @@ dl.work dl.stats dd.published::before {
 
 dl.work dl.stats dd.status::before {
   background: url(https://64.media.tumblr.com/0ef9349a36cf808783e9488a97b64678/b2e751421a20aa0c-10/s250x400/8df1d3da298f875381822968f8e71ed4d7bcae31.png);
+}
+
+ul.statistics dl.stats dd.subscriptions::before {
+  background: url(https://64.media.tumblr.com/64db76a65209eff79515dfc23842eb54/fd0b10e0262ddb71-14/s250x400/921de73c3d5bb819f4e3c58c7c45bd4c6edfe55f.png);
 }
 
 ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before {
