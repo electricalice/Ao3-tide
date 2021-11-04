@@ -1,26 +1,62 @@
+/*
+===========
+  GENERAL
+===========
+*/
+/*Font size (change the percentage to change the font size of the work)*/
+#workskin, .userstuff {
+  font-size: 110%;
+}
+
+/*title font*/
 h4 {
   font-size: 1.2em;
 }
 
+/*brings back the full width after reducing it on desktop*/
+div#inner, #workskin,
+.collection blockquote.userstuff,
+.blurb .userstuff,
+.news .userstuff,
+.system .userstuff {
+  width: 100% !important;
+}
+
+/*footer modules behave*/
 #footer .module {
   max-width: 40%;
   margin: auto;
 }
 
-.userstuff,
+#footer .heading {
+  overflow-wrap: break-word;
+}
+
+/*general fixes*/
+.filters dt, .javascript {
+  background-color: transparent;
+}
+
+#ui-datepicker-div {
+  top: 522px !important;
+}
+
+/*
+========
+ Header
+========
+*/
+/*font size of the header*/
 #header {
   font-size: 110%;
 }
 
+/*search bar on its own line*/
 #header .search {
   display: block;
 }
 
-#footer .heading,
-.comment h4.byline {
-  overflow-wrap: break-word;
-}
-
+/*positioning header elements*/
 #header .heading,
 #login,
 #greeting,
@@ -45,6 +81,26 @@ h4 {
   text-align: center;
 }
 
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current + .menu {
+  width: auto;
+}
+
+/*rearranges the menu that gets out of screen*/
+.primary li:nth-of-type(4) .menu {
+  margin-left: -110px;
+}
+
+/*end of header*/
+/* 
+========
+  News
+========
+*/
 .home .header .userstuff,
 .home .header dl.stats,
 .home .header .type {
@@ -69,19 +125,27 @@ dd.actions {
   float: none;
 }
 
-#header .menu,
-#small_login,
-#header .dropdown:hover .current + .menu,
-#header .menu,
-#small_login,
-#header .dropdown:hover .current + .menu {
-  width: auto;
+.news h4.landmark {
+  display: none;
+}
+
+/*  Centers Usernames and titles in admin pages and collections  */
+.user h2.heading,
+.admin h2.heading,
+.collection h2.heading {
+  margin: 10px auto;
+  text-align: center;
 }
 
 div.preface {
   margin: 1.5em;
 }
 
+/* 
+=========
+Dashboard
+=========
+*/
 #dashboard,
 #dashboard.own {
   border-bottom: 0px;
@@ -89,6 +153,11 @@ div.preface {
   border: 0px;
 }
 
+/* 
+=========
+  Blurb
+=========
+*/
 .blurb .header .heading {
   margin: 0.375em 0.375em;
   overflow-wrap: break-word;
@@ -98,6 +167,15 @@ div.preface {
   position: initial;
   text-align: center;
   margin-top: 5px;
+}
+
+a.tag {
+  word-break: break-word;
+}
+
+/*damned long long long usernames in blurbs*/
+.blurb h4.heading a {
+  word-break: break-word;
 }
 
 /* the following lines of codes rearrange the required tags icons*/
@@ -168,23 +246,12 @@ div.preface {
   padding-right: 0;
 }
 
-a.tag {
-  word-break: break-word;
-}
-
-.filters dt {
-  background-color: transparent;
-}
-
-#ui-datepicker-div {
-  top: 522px !important;
-}
-
-.javascript {
-  background-color: transparent;
-}
-
-/*wrangling stuff*/
+/*this ends the blurb icon rearranging*/
+/*
+=============
+ wrangulator
+=============
+*/
 .assigned.module th[scope=col],
 thead th[scope=col] {
   max-width: 18px;
@@ -214,37 +281,17 @@ tr, th, td, thead, tfoot {
 }
 
 /*end wrangling stuff*/
-.primary li:nth-of-type(4) .menu {
-  margin-left: -110px;
-}
-
-p.kudos {
-  background: url(/images/imageset.png) no-repeat -110px -580px;
-  padding: 4em 0 0 0;
-  min-height: 50px;
-  word-break: break-word;
-}
-
-.blurb h4.heading a {
-  word-break: break-word;
-}
-
+/* mostly for stuff in the guidelines . lowers the indent*/
 .faq .userstuff .notice,
 .faq .userstuff .caution,
 .faq .example,
 .guideline .userstuff .notice,
 .guideline .userstuff .caution,
 .guideline .example {
-  /* mostly for stuff in the guidelines 
-  lowers the indent*/
   margin: 0;
 }
 
-.userstuff dd {
-  /*less indent*/
-  margin-inline-start: 1em;
-}
-
+/* for buttons that have too long text*/
 li.showme a.actions,
 dl.stats dd,
 .actions a,
@@ -262,18 +309,8 @@ dl.stats dd,
  Work Page
 ===========
 */
-#workskin,
-.collection blockquote.userstuff {
-  /*
-  This resets the main page width to a decent size for mobile
-  */
-  width: 100%;
-}
-
+/*Kudos*/
 p.kudos {
-  /*
-  Resets the padding for kudos username list and moves the kudos image
-  */
   background: none;
   padding: 0;
   min-height: 0;
@@ -284,11 +321,9 @@ p.kudos::before {
   content: "Kudos:";
 }
 
+/*  reduces the indent in the blockquotes and the author's note  */
 div.preface,
 .preface.group blockquote.userstuff {
-  /*
-  reduces the indent in the blockquotes and the author's note
-  */
   margin: 0;
 }
 
@@ -303,21 +338,14 @@ div.preface,
   margin: 10px;
 }
 
-#workskin,
-.blurb .userstuff,
-.news .userstuff,
-.system .userstuff,
-.collection blockquote.userstuff {
-  width: 100% !important;
-}
-
 .skins .header .heading,
 .user.pseud.picture.blurb .header .heading {
   margin: 0.375em 0.375em;
 }
 
-div#inner {
-  width: 100% !important;
+.userstuff dd {
+  /*less indent*/
+  margin-inline-start: 1em;
 }
 
 .blurb dl.tags dd,
@@ -330,16 +358,14 @@ dl.meta dd {
 }
 
 /*
-===========
+=========
   Icons
-===========
+=========
 */
+/* centers the icons on profile pages, collections and news posts */
 .user .primary p.icon,
 .admin .primary .icon,
 .collection .icon {
-  /* 
-  centers the icons on profile pages, collections and news posts
-  */
   position: initial;
   margin: 10px auto;
 }
@@ -348,29 +374,29 @@ dl.meta dd {
   position: relative;
 }
 
-.user h2.heading,
-.admin h2.heading,
-.collection h2.heading {
-  /*
-  Centers Usernames and titles in admin pages and collections
-  */
-  margin: 10px auto;
-  text-align: center;
-}
-
-.comment .icon .visitor {
-  background: url(/images/imageset.png) no-repeat 0 -525px transparent;
-}
-
 input#site_search {
   width: auto;
 }
 
-/* COMMENTS*/
+/* 
+==========
+ Comments
+==========
+*/
 .comment blockquote.userstuff p {
   width: 95%;
   margin-left: 0;
   margin-block-end: 0;
   margin-block-start: 0;
   margin-block: 0;
+}
+
+/*other measurements to anon comments icons*/
+.comment .icon .visitor {
+  background: url(/images/imageset.png) no-repeat 0 -525px transparent;
+}
+
+/*too long usernames*/
+.comment h4.byline {
+  overflow-wrap: break-word;
 }

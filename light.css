@@ -78,7 +78,7 @@ button, #main, select {
 .filters dt,
 .filters dd,
 .filters input[type=submit],
-.filters .expander, .userstuff h2, .userstuff h1, .userstuff h3, .userstuff h4, p.note, blockquote, body,
+.filters .expander, .userstuff li, .userstuff ul, .userstuff p, .userstuff h2, .userstuff h1, .userstuff h3, .userstuff h4, p.note, blockquote, body,
 input,
 .toggled form,
 .dynamic form,
@@ -93,7 +93,7 @@ button, #main, select {
   as a measurement changes A LOT between numbers, so you might want to try
   decimals like 1.7em, 1.5em, 1.65em before going a number up (or down)
   */
-  line-height: 1.125;
+  line-height: 1.5;
 }
 
 .filters dt,
@@ -137,6 +137,72 @@ h4.heading .datetime {
 
 .news h4.heading {
   margin: 0;
+}
+
+code, pre {
+  font-family: "Courier New", Courier, Monospace;
+  font-size: 1em;
+  padding: 1em 0.5em;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+.filters dt,
+.filters dd,
+.filters input[type=submit],
+.filters .expander {
+  /* 
+  for some weird reason this is needed 
+  or fonts just won't behave
+  */
+  font-size: 100%;
 }
 
 #header {
@@ -775,6 +841,10 @@ tfoot {
   vertical-align: middle;
 }
 
+col.name {
+  background: transparent;
+}
+
 .bookmark .user,
 .filters dl,
 .filters dt,
@@ -791,7 +861,7 @@ div.comment,
 .comment div.icon,
 a,
 a:link,
-a:visited:hover {
+a:visited:hover, .alert .userstuff {
   /* remove borders */
   border: none;
 }
@@ -897,6 +967,7 @@ form.inbox {
   color: #fafafa;
   border-radius: 5px;
   box-shadow: none;
+  z-index: 1;
 }
 
 .qtip-content {
@@ -1065,6 +1136,7 @@ input#site_search:focus,
 form.verbose legend {
   color: #2e2e2e;
   background-color: #f2f2f2;
+  transition: box-shadow 0.3s ease-out;
 }
 
 a:hover,
@@ -1102,10 +1174,36 @@ a[href*="/users/logout"],
 .event .userstuff a:visited {
   background: linear-gradient(126deg, #d84549 0%, #e14c74 100%);
   color: #fafafa;
+  box-shadow: 1px 3px 10px -3px #c7c7c7;
+}
+
+a.tag:hover,
+a.tag:visited:hover,
+.listbox .heading a.tag:hover,
+.listbox .heading a.tag:visited:hover,
+.actions a:hover,
+.actions a:visited:hover,
+.actions a:focus,
+.actions input:hover,
+.actions input:focus,
+label.action:hover,
+.action:hover,
+.action:visited:hover,
+.action:focus,
+input[type=submit]:hover {
+  box-shadow: 1px 3px 10px -3px #c7c7c7 !important;
+}
+
+#header .actions a.dropdown-toggle:hover {
+  box-shadow: none !important;
 }
 
 .blurb h4 a:visited {
   color: #d84549 !important;
+}
+
+.pagination .current {
+  color: #7b7b7b;
 }
 
 #dashboard .current,
@@ -1149,7 +1247,7 @@ a.modal.help:hover, li.relationships a {
 ul.notes,
 .caution,
 .comment_error,
-.alert.flash,
+.alert.flash, .alert .userstuff,
 .required .autocomplete,
 .autocomplete .notice,
 #header h2.collections,
@@ -1356,6 +1454,11 @@ tbody tr:hover {
   color: #fafafa;
 }
 
+/*
+=======
+ Blurb
+======= 
+*/
 .blurb h4.heading {
   text-align: center;
   padding: 10px 0;
@@ -1387,6 +1490,11 @@ h5.fandoms.heading {
   margin: auto 10px;
 }
 
+/*
+===========
+Stats Icons
+===========
+*/
 dl.stats dt {
   display: none;
 }
@@ -1449,6 +1557,12 @@ dl.stats dd.published::before, dl.stats dd.status::before {
   margin-right: 0px;
 }
 
+/*End of Stats Icons*/
+/*
+======
+ Tags
+======
+*/
 a.tag:hover, li.relationships a.tag:hover, li.characters a.tag:hover {
   background: linear-gradient(126deg, #d84549 0%, #e14c74 100%) !important;
   box-shadow: 1px 3px 10px -3px #c7c7c7 !important;
@@ -1462,14 +1576,17 @@ a.tag {
   display: inline-block;
 }
 
+/*relationships tags have one background color*/
 li.relationships a.tag {
   background: #eed8d9 !important;
 }
 
+/*and character tags have a different background color*/
 li.characters a.tag {
   background: #f0e6e6 !important;
 }
 
+/*removes the comma between tags*/
 .commas li:after {
   content: "";
 }
@@ -1479,6 +1596,12 @@ li.characters a.tag {
   display: none;
 }
 
+/*title in tag pages (sometimes they become SO LONG)*/
 h2.heading a.tag {
   font-size: 75%;
+}
+
+/*useless shadow animation on tags*/
+a.tag {
+  transition: color 0.5s ease-out, box-shadow 0.3s;
 }
