@@ -705,10 +705,16 @@ input[type=checkbox]:hover,
 input[type=checkbox]:checked,
 input[type=radio]:checked,
 .actions input[type=checkbox]:checked,
-label.action input[type=checkbox]:checked,
-input[type=checkbox]:hover,
-.actions input[type=checkbox]:hover {
+label.action input[type=checkbox]:checked {
   background-color: #d84549;
+  border: none;
+}
+
+input[type=checkbox]:hover,
+.actions input[type=checkbox]:hover, .filters [type=checkbox]:hover + .indicator:before,
+.filters [type=radio]:hover + .indicator:before,
+.filters .exclude [type=checkbox]:hover + .indicator:before {
+  background-color: #e0878a;
   border: none;
 }
 
@@ -1459,6 +1465,10 @@ tbody tr:hover {
  Blurb
 ======= 
 */
+h5.fandoms.heading {
+  color: transparent;
+}
+
 .blurb h4.heading {
   text-align: center;
   padding: 10px 0;
@@ -1499,62 +1509,115 @@ dl.stats dt {
   display: none;
 }
 
-li.collection dl.stats dt, li.series dl.stats dt, dl.series dl.stats dt {
-  display: inline-block !important;
+.skins .header dl.stats dt {
+  display: inline-block;
 }
 
+/*for the series in the bookmarks page*/
+dl.stats dd:nth-of-type(1)::before {
+  /*words*/
+  background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
+}
+
+dl.stats dd:nth-of-type(2)::before {
+  /*works*/
+  background: url(https://64.media.tumblr.com/f835b437a474b4b672a8d4ebe61402b8/8979adde76f2ff05-fb/s100x200/8f86556b6896e96427f5a4a54f0de7be38ddba75.png);
+}
+
+dl.stats dd.language::before {
+  display: none !important;
+}
+
+/*work blurb*/
 dl.stats dd.kudos::before {
+  /*kudos*/
   background: url(https://64.media.tumblr.com/23a3c6f134a96386f50fb8982a353590/8b704f26c7323545-01/s100x200/31e25f0be03646918168c4d49bd2ee9733b2cd59.png);
 }
 
 dl.stats dd.words::before {
+  /*words*/
   background: url(https://64.media.tumblr.com/fff96d500a04ddf12517a48d83b228d2/b2e751421a20aa0c-a7/s100x200/c848a67de8f463ccdafa5b60948c61a172d5fe24.png);
 }
 
 dl.stats dd.chapters::before {
+  /*chapters*/
   background: url(https://64.media.tumblr.com/a8ca48310f24581ae539336583690b26/b2e751421a20aa0c-5c/s100x200/a51b914598b64c3ddf6f705b278f11a68301d443.png);
 }
 
 dl.stats dd.comments::before {
+  /*comments*/
   background: url(https://64.media.tumblr.com/7172c0bbe03a0eef7b236014dc78c905/8b704f26c7323545-78/s250x400/f37ba1ff69b5ef2ad7e5fe66b61fd748badc00d1.png);
 }
 
-dl.stats dd.bookmarks::before {
+dl.stats dd.bookmarks::before, dl.stats dd a[href$=bookmarks]::before {
+  /*bookmarks*/
   background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
 }
 
 dl.stats dd.hits::before {
+  /*hits*/
   background: url(https://64.media.tumblr.com/b2b8862a356132ac1aa41e9e9f0ddd1d/b2e751421a20aa0c-9e/s100x200/dcd2bcb1adbbb8f9e1844b61aee3dd3a653531e3.png);
 }
 
 dl.stats dd.collections::before {
+  /*collections*/
   background: url(https://64.media.tumblr.com/ae825c2ad8071426c298c5b52970e294/b2e751421a20aa0c-18/s100x200/d1eb5dd259e2db588cda2100057c2c8fd9efaaf0.png);
 }
 
 dl.work dl.stats dd.published::before {
+  /*date published*/
   background: url(https://64.media.tumblr.com/7e13419071a7eeb35f48a76c7aa0ba36/b2e751421a20aa0c-5d/s250x400/7f351f60793ad683e4a9dc4de55e4ee4d625f9d2.png);
 }
 
 dl.work dl.stats dd.status::before {
+  /*completion status*/
   background: url(https://64.media.tumblr.com/0ef9349a36cf808783e9488a97b64678/b2e751421a20aa0c-10/s250x400/8df1d3da298f875381822968f8e71ed4d7bcae31.png);
 }
 
 ul.statistics dl.stats dd.subscriptions::before {
+  /*subscriptions (in the stat page)*/
   background: url(https://64.media.tumblr.com/64db76a65209eff79515dfc23842eb54/fd0b10e0262ddb71-14/s250x400/921de73c3d5bb819f4e3c58c7c45bd4c6edfe55f.png);
 }
 
-ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before {
+/*adjustments for the stat page*/
+dl.stats dd.published::before, dl.stats dd.status::before {
+  width: 0px;
+  margin-right: 0px;
+}
+
+/*for the collections*/
+li.collection dl.stats dd a[href$=collections]::before {
+  /*collections and sub collections*/
+  background: url(https://64.media.tumblr.com/ae825c2ad8071426c298c5b52970e294/b2e751421a20aa0c-18/s100x200/d1eb5dd259e2db588cda2100057c2c8fd9efaaf0.png);
+}
+
+li.collection dl.stats dd a[href$=works]::before {
+  /*works*/
+  background: url(https://64.media.tumblr.com/f835b437a474b4b672a8d4ebe61402b8/8979adde76f2ff05-fb/s100x200/8f86556b6896e96427f5a4a54f0de7be38ddba75.png);
+}
+
+li.collection dl.stats dd a[href$=bookmarks]::before {
+  /*bookmarks*/
+  background: url(https://64.media.tumblr.com/9b95d189a57699762d2262536e922ece/b2e751421a20aa0c-2a/s100x200/1aabb2ad7b90746f0469aefaa39af5b83728f8b9.png);
+}
+
+li.collection dl.stats dd a[href$=fandoms]::before {
+  /*fandoms*/
+  background: url(https://64.media.tumblr.com/0a2f3d28fb850907a859726916e04e6f/8979adde76f2ff05-48/s250x400/926b1499363f66438d02fdc8bbea5ce610a75395.png);
+}
+
+/*
+this creates the space before the stats for the icon. 
+Yes this is the worst css code ever written I blame Ao3's frontend inconsistencies.
+but I'm also sorry for putting this out in the world. I have no excuses.
+*/
+ul.statistics dl.stats dd::before, li.work dl.stats dd::before, li.bookmark dl.stats dd::before, dl.work dl.stats dd::before, .collection dl.stats dd a[href$=collections]::before, li.collection dl.stats dd a[href$=works]::before, li.collection dl.stats dd a[href$=bookmarks]::before, li.collection dl.stats dd a[href$=fandoms]::before, li.series dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions):nth-of-type(1)::before, li:not(.collection) dl.stats dd:not(.language):not(.words):not(.chapters):not(.collections):not(.comments):not(.kudos):not(.bookmarks):not(.hits):not(.published):not(.subscriptions):nth-of-type(2)::before, dl.stats dd:not(.bookmarks) a[href$=bookmarks]::before {
   display: inline-block;
   width: 14px;
   height: 14px;
   content: " ";
   background-size: 14px 14px !important;
   margin-right: 5px;
-}
-
-dl.stats dd.published::before, dl.stats dd.status::before {
-  width: 0px;
-  margin-right: 0px;
 }
 
 /*End of Stats Icons*/
