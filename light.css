@@ -560,6 +560,10 @@ fieldset.work.meta .fandom.required ul.autocomplete {
   Filters!
 ============
 */
+.filters fieldset {
+  padding: 0px;
+}
+
 .filters .expander,
 .filters .expanded .expander {
   /* 
@@ -716,6 +720,14 @@ input[type=checkbox]:hover,
 .filters .exclude [type=checkbox]:hover + .indicator:before {
   background-color: #e0878a;
   border: none;
+}
+
+.filters dt {
+  min-width: auto;
+}
+
+.filters {
+  font-size: 90%;
 }
 
 /*
@@ -997,6 +1009,24 @@ textarea.LV_invalid_field:active {
 #bookmark-form,
 #collection-form {
   margin-top: 20px;
+}
+
+/*changes the stats page. yes I need to use hue-rotate because fill is not allowed by ao3. help.*/
+#stat_chart svg rect:first-of-type {
+  opacity: 0%;
+}
+
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect, #stat_chart svg g:nth-of-type(2) > g rect:last-of-type, #stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:first-of-type {
+  filter: hue-rotate(222deg);
+  opacity: 70% !important;
+}
+
+#stat_chart svg text {
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+}
+
+#stat_chart g[clip-path^=url] > g:nth-of-type(2) rect:hover {
+  filter: hue-rotate(217deg);
 }
 
 a.dropdown-toggle[href*="/works/new"] {
