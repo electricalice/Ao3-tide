@@ -83,9 +83,6 @@ div#inner, #workskin,
 
 #header .menu,
 #small_login,
-#header .dropdown:hover .current + .menu,
-#header .menu,
-#small_login,
 #header .dropdown:hover .current + .menu {
   width: auto;
 }
@@ -93,6 +90,10 @@ div#inner, #workskin,
 /*rearranges the menu that gets out of screen*/
 .primary li:nth-of-type(4) .menu {
   margin-left: -110px;
+}
+
+#header .menu {
+  left: initial;
 }
 
 /*end of header*/

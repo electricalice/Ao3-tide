@@ -382,7 +382,7 @@ textarea, .actions a,
 .actions a:link,
 .action,
 .action:link,
-button,
+button, button[type=submit],
 .current,
 .actions label {
   /*
@@ -403,7 +403,7 @@ textarea, .actions a,
 .actions a:link,
 .action,
 .action:link,
-button,
+button, button[type=submit],
 .current,
 .actions label {
   /*
@@ -418,7 +418,7 @@ textarea, .actions a,
 .actions a:link,
 .action,
 .action:link,
-button,
+button, button[type=submit],
 .current,
 .actions label {
   /*
@@ -436,7 +436,7 @@ form.verbose legend,
 .action,
 .action:link,
 input[type=submit],
-button,
+button, button[type=submit],
 .current,
 .actions label, .notice,
 .comment_notice,
@@ -463,7 +463,7 @@ label.action:hover,
 .actions a:link,
 .action,
 .action:link,
-button,
+button, button[type=submit],
 .current,
 .actions label {
   border: none;
@@ -472,6 +472,25 @@ button,
 input {
   width: 96%;
   border: 1px solid;
+}
+
+form.search input[type=text],
+dd.autocomplete li.input,
+input[type=radio],
+select,
+input[type=checkbox],
+input[type=file],
+input.number,
+p input,
+p select,
+.heading select,
+li select,
+input:focus,
+select:focus,
+textarea:focus,
+input,
+textarea {
+  border: 0px;
 }
 
 .actions a:hover,
@@ -499,7 +518,7 @@ dl.index dd,
 .unwrangled,
 .unreviewed,
 .ui-sortable li:hover,
-#header .primary .menu .current {
+#header .primary .menu .current, button[type=submit]:hover {
   /* resets the border color */
   border-color: initial;
   /* extra aggressive shadow removing */
@@ -515,7 +534,7 @@ form.verbose legend,
 .action,
 .action:link,
 input[type=submit],
-button,
+button, button[type=submit],
 .current,
 .actions label {
   border-bottom: none;
@@ -525,7 +544,7 @@ button,
 .dashboard .listbox .index,
 .splash .news li,
 form dt,
-.picture .header {
+.picture .header, button[type=submit]:hover {
   /* 
   some stuff needs some aggressive non-bordering 
   */
@@ -1154,6 +1173,7 @@ li::marker,
 .actions input,
 input[type=submit],
 button,
+button[type=submit],
 .current,
 .actions label,
 .dropdown,
@@ -1196,6 +1216,7 @@ label.action:hover,
 .blurb h4 a:visited:hover,
 .blurb h4 a:hover,
 input[type=submit]:hover,
+button[type=submit]:hover,
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:visited:hover,
 #header .dropdown .menu a:focus:hover,
@@ -1207,6 +1228,11 @@ a[href*="/users/logout"],
   background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
   color: #2e2e2e;
   box-shadow: 1px 3px 10px -3px black;
+}
+
+.event .userstuff a, .event .userstuff a:link, .event .userstuff a:visited {
+  box-shadow: none;
+  background: none;
 }
 
 a.tag:hover,
@@ -1222,7 +1248,8 @@ label.action:hover,
 .action:hover,
 .action:visited:hover,
 .action:focus,
-input[type=submit]:hover {
+input[type=submit]:hover,
+button[type=submit]:hover {
   box-shadow: 1px 3px 10px -3px black !important;
 }
 
