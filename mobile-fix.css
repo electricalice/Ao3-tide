@@ -22,6 +22,10 @@ div#inner, #workskin,
   width: 100% !important;
 }
 
+#workskin {
+  padding: 0;
+}
+
 /*footer modules behave*/
 #footer .module {
   max-width: 40%;

@@ -337,7 +337,7 @@ Buttons!
 #header .menu,
 #small_login,
 #header .dropdown:hover .current + .menu,
-.event .userstuff, .notice,
+.event .userstuff, button.expanded .current, ul.expandable.secondary, .work.navigation .download, .javascript .work.navigation .download .secondary, .notice,
 .comment_notice,
 ul.notes,
 .caution,
@@ -352,7 +352,7 @@ label.action:hover,
 .action:hover,
 .action:focus,
 .dynamic form,
-.ui-draggable form, #header .primary,
+.ui-draggable form, ul.expandable.secondary:hover, ul.expandable.secondary:focus, #header .primary,
 .group.listbox,
 fieldset fieldset.listbox,
 #main li.blurb,
@@ -382,7 +382,7 @@ textarea, .actions a,
 .actions a:link,
 .action,
 .action:link,
-button, button[type=submit],
+button, button[type=submit], button.expanded, button.collapsed,
 .current,
 .actions label {
   /*
@@ -397,13 +397,13 @@ li.selected,
 .autocomplete a:hover, form .notice,
 form ul.notes,
 form.verbose legend,
-.verbose form legend, input, .actions input,
+.verbose form legend, button.expanded .current, ul.expandable.secondary, .work.navigation .download, .javascript .work.navigation .download .secondary, input, .actions input,
 input[type=submit],
 textarea, .actions a,
 .actions a:link,
 .action,
 .action:link,
-button, button[type=submit],
+button, button[type=submit], button.expanded, button.collapsed,
 .current,
 .actions label {
   /*
@@ -418,7 +418,7 @@ textarea, .actions a,
 .actions a:link,
 .action,
 .action:link,
-button, button[type=submit],
+button, button[type=submit], button.expanded, button.collapsed,
 .current,
 .actions label {
   /*
@@ -436,9 +436,8 @@ form.verbose legend,
 .action,
 .action:link,
 input[type=submit],
-button, button[type=submit],
-.current,
-.actions label, .notice,
+button, button[type=submit], button.collapsed, button.expanded .current,
+.actions label, ul.expandable.secondary, .work.navigation .download, .javascript .work.navigation .download .secondary, .notice,
 .comment_notice,
 ul.notes,
 .caution,
@@ -454,7 +453,7 @@ label.action:hover,
 .action:focus,
 .toggled form,
 .dynamic form,
-.ui-draggable form {
+.ui-draggable form, ul.expandable.secondary:hover, ul.expandable.secondary:focus {
   /* Sets the style for border buttons */
   border: none;
 }
@@ -463,7 +462,7 @@ label.action:hover,
 .actions a:link,
 .action,
 .action:link,
-button, button[type=submit],
+button, button[type=submit], button.expanded, button.collapsed,
 .current,
 .actions label {
   border: none;
@@ -518,7 +517,7 @@ dl.index dd,
 .unwrangled,
 .unreviewed,
 .ui-sortable li:hover,
-#header .primary .menu .current, button[type=submit]:hover {
+#header .primary .menu .current, button[type=submit]:hover, button.expanded, button.collapsed, .work.navigation .download, .javascript .work.navigation .download .secondary {
   /* resets the border color */
   border-color: initial;
   /* extra aggressive shadow removing */
@@ -534,9 +533,8 @@ form.verbose legend,
 .action,
 .action:link,
 input[type=submit],
-button, button[type=submit],
-.current,
-.actions label {
+button, button[type=submit], button.collapsed, button.expanded .current,
+.actions label, ul.expandable.secondary, .work.navigation .download, .javascript .work.navigation .download .secondary {
   border-bottom: none;
 }
 
@@ -544,7 +542,7 @@ button, button[type=submit],
 .dashboard .listbox .index,
 .splash .news li,
 form dt,
-.picture .header, button[type=submit]:hover {
+.picture .header, button[type=submit]:hover, button.expanded, button.collapsed {
   /* 
   some stuff needs some aggressive non-bordering 
   */
@@ -1173,7 +1171,7 @@ li::marker,
 .actions input,
 input[type=submit],
 button,
-button[type=submit],
+button[type=submit], button.collapsed,
 .current,
 .actions label,
 .dropdown,
@@ -1216,7 +1214,7 @@ label.action:hover,
 .blurb h4 a:visited:hover,
 .blurb h4 a:hover,
 input[type=submit]:hover,
-button[type=submit]:hover,
+button[type=submit]:hover, button.expanded, button.collapsed:hover,
 #header .dropdown .menu a:hover,
 #header .dropdown .menu a:visited:hover,
 #header .dropdown .menu a:focus:hover,
@@ -1436,7 +1434,7 @@ textarea {
   background-color: #2e2e2e;
 }
 
-.javascript {
+.javascript, ul.expandable.secondary {
   background-color: #4f4f4f !important;
 }
 
